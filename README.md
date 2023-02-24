@@ -18,6 +18,27 @@ This code has tested with [pytorch 1.13.1](https://pytorch.org/)
 
 See [demo.ipynb](demo.ipynb)
 
+## Results
+
+Visualization on the reverse process
+
+* epoch = 0
+
+<p align="center">
+    <br>
+    <img src="__res__/figs/epoch0.png" width="400" />
+    <br>
+<p>
+
+* epoch = 1000
+
+<p align="center">
+    <br>
+    <img src="__res__/figs/epoch1000.png" width="400" />
+    <br>
+<p>
+
+
 
 
 
