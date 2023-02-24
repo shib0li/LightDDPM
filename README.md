@@ -26,7 +26,7 @@ Visualization on the reverse process
 
 <p align="center">
     <br>
-    <img src="__res__/figs/epoch0.png" width="800" />
+    <img src="__res__/figs/epoch0.png" width="1200" />
     <br>
 <p>
 
@@ -34,7 +34,7 @@ Visualization on the reverse process
 
 <p align="center">
     <br>
-    <img src="__res__/figs/epoch1000.png" width="800" />
+    <img src="__res__/figs/epoch1000.png" width="1200" />
     <br>
 <p>
 
