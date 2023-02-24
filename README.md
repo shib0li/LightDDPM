@@ -10,4 +10,17 @@ from scikit-learn.
     <br>
 <p>
 
+## System Requirement
+
+This code has tested with [pytorch 1.13.1](https://pytorch.org/)
+
+## Run
+
+See [demo.ipynb](demo.ipynb)
+
+
+
+
+
+
 
