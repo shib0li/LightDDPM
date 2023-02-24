@@ -5,4 +5,8 @@ This is a light implementation of [*Denoising Diffusion Probabilistic Models*](h
 on a toy manifold learning dataset [*s_curve*](https://scikit-learn.org/stable/auto_examples/manifold/plot_compare_methods.html#sphx-glr-auto-examples-manifold-plot-compare-methods-py)
 from scikit-learn.
 
-![s_curve](s_curve.png)
+<p align="center">
+    <br>
+    <img src="s_curve.png" width="800" />
+    <br>
+<p>
