@@ -147,9 +147,11 @@ for ie in tqdm(range(max_epochs+1)):
             cur_x = x_seq[i*10].detach()
             axs[i-1].scatter(cur_x[:,0],cur_x[:,1],color='red',edgecolor='white')
             axs[i-1].set_axis_off()
-            axs[i-1].set_title('$q(\mathbf{x}_{'+str(i*10)+'})$')
+            #axs[i-1].set_title('$q(\mathbf{x}_{'+str(i*10)+'})$', fontsize=30)
+            axs[i - 1].set_title('$p(\mathbf{x}_{' + str(model.diff_steps-i*10) + '})$', fontsize=30)
 
-        plt.savefig(os.path.join('__res__', 'figs', 'epoch{}.png').format(ie), )
+        plt.savefig(os.path.join('__res__', 'figs', 'epoch{}.png').format(ie))
+        plt.close(fig)
         torch.save(model.state_dict(), os.path.join(stat_path, 'epoch{}.pt'.format(ie)))
 
 
