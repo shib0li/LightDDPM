@@ -38,6 +38,39 @@ Visualization on the reverse process
     <br>
 <p>
 
+* epoch = 2000
+
+<p align="center">
+    <br>
+    <img src="__res__/figs/epoch2000.png" width="1200" />
+    <br>
+<p>
+
+* epoch = 3000
+
+<p align="center">
+    <br>
+    <img src="__res__/figs/epoch3000.png" width="1200" />
+    <br>
+<p>
+
+* epoch = 4000
+
+<p align="center">
+    <br>
+    <img src="__res__/figs/epoch4000.png" width="1200" />
+    <br>
+<p>
+
+* epoch = 5000
+
+<p align="center">
+    <br>
+    <img src="__res__/figs/epoch5000.png" width="1200" />
+    <br>
+<p>
+
+
 
 
 
