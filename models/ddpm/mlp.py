@@ -2,6 +2,58 @@ import torch
 import torch.nn as nn
 
 
+class MLP(nn.Module):
+    """
+    Simple fully connected neural network
+
+    Args:
+        in_dim
+        hidden_dim:
+        hidden_layers:
+        out_dim:
+        act:
+    """
+
+    def __init__(
+            self,
+            in_dim: int,
+            hidden_dim: int,
+            hidden_layers: int,
+            out_dim: int,
+            act: str,
+    ):
+        super().__init__()
+
+        layer_configs = [in_dim] + [hidden_dim] * hidden_layers + [out_dim]
+
+        if act == 'tanh':
+            act_fn = nn.Tanh()
+        elif act == 'relu':
+            act_fn = nn.ReLU()
+        elif act == 'elu':
+            act_fn = nn.ELU()
+        #
+
+        layers = []
+        for i in range(len(layer_configs) - 2):
+            layers.append(nn.Linear(layer_configs[i], layer_configs[i + 1]))
+            nn.init.xavier_normal_(layers[-1].weight)
+            nn.init.zeros_(layers[-1].bias)
+            layers.append(act_fn)
+        #
+
+        layers.append(nn.Linear(layer_configs[-2], layer_configs[-1]))
+        nn.init.xavier_normal_(layers[-1].weight)
+        nn.init.zeros_(layers[-1].bias)
+
+        self.net = nn.Sequential(*layers)
+
+    def forward(
+            self,
+            x: torch.Tensor,
+    ) -> torch.Tensor:
+        return self.net(x)
+
 class MLPDiffusion(nn.Module):
     def __init__(
             self,
